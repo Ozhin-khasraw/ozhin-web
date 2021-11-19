@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chessboard</title> 
+	<style type="text/css">
+		table{
+			border: 3px solid black;
+			background: white;
+			border-collapse: collapse;
+			
+		}
+
+		.clll{
+
+			 background-color: white;
+			 height: 40px;
+			width: 40px;
+			color:green;
+		}
+		td{
+			background-color: black;
+			color:yellow;
+		}
+
+	</style>
+</head>
+<body>
+
+	<table>
+		<?php 
+			$arr = array('a','b','c','d','e','f','g','h');
+			for ($i=8; $i >0 ; $i--) { 
+
+				echo "<tr>";
+
+					for ($y=0; $y <8 ; $y++) { 
+
+						if (($y+$i)%2==0) {
+							echo "<td class='clll'>".$arr[$y].$i."</td>";
+						}else{
+							echo "<td>".$arr[$y].$i."</td>";
+						}
+					}
+				echo "</tr>";
+			}
+		?>
+
+	</table>
+
+</body>
+</html>
